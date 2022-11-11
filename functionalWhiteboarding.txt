@@ -1,0 +1,30 @@
+function reDup(input) {
+  let out = []
+  for (let x = 0; x < input.length; x ++) {
+    if (out.includes(input[x])) {
+    } else {
+      out.push(input[x])
+    }
+  }
+  return out
+}
+
+
+
+// Recursive
+
+function reDup(input, output) {
+  if (output === undefined) {
+    output = [];
+  }
+  if (input.length === 0) {
+    return output;
+  }
+  if (output.includes(input[0])) {
+  } else {
+    output.push(input[0]);
+  }
+  const a = input;
+  a.shift();
+  return Prop2(a, output);
+}
